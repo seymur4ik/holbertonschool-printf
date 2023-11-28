@@ -2,4 +2,4 @@
 #define MAIN_H
 
 int _printf(const char *format, ...);
-#ENDIF
+#endif
