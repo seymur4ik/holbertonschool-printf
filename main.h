@@ -114,7 +114,9 @@ int is_digit(char);
 long int convert_size_number(long int num, int size);
 long int convert_size_unsgnd(unsigned long int num, int size);
 
-#endif#ifndef MAIN_H
+#endif
+
+#ifndef MAIN_H
 #define MAIN_H
 
 #include <stdarg.h>
