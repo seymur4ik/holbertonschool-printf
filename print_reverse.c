@@ -19,7 +19,8 @@ int print_reverse(va_list types, char buffer[],
 				UNUSED(buffer);
 					UNUSED(flags);
 						UNUSED(width);
-							UNUSED(size);
+							UNUSED(precision);
+								UNUSED(size);
 
 								str = va_arg(types, char *);
 
