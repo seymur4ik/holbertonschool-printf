@@ -240,7 +240,7 @@ int print_rot13string(va_list types, char buffer[],
  *        * @size: Size specifier
  *         * Return: Number of chars printed
  *          */
-int print_non_printable(va_list types, char buffer[],
+/*int print_non_printable(va_list types, char buffer[],
 			int flags, int width, int precision, int size)
 {
 		int i = 0, offset = 0;
@@ -267,7 +267,7 @@ int print_non_printable(va_list types, char buffer[],
 										buffer[i + offset] = '\0';
 
 											return (write(1, buffer, i + offset));
-}
+}*/
 
 /**
  *  * print_reverse - Prints reverse string.
