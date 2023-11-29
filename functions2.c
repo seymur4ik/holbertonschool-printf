@@ -178,7 +178,7 @@ int print_rot13string(va_list types, char buffer[],
 																return (count);
 }
 
-#include "main.h"
+/*#include "main.h"*/
 
 /**
  *  * print_pointer - Prints the value of a pointer variable
@@ -190,7 +190,7 @@ int print_rot13string(va_list types, char buffer[],
  *        * @size: Size specifier
  *         * Return: Number of chars printed.
  *          */
-int print_pointer(va_list types, char buffer[],
+/*int print_pointer(va_list types, char buffer[],
 			int flags, int width, int precision, int size)
 {
 		char extra_c = 0, padd = ' ';
@@ -228,7 +228,7 @@ int print_pointer(va_list types, char buffer[],
 
 																		return (write_pointer(buffer, ind, length,
 																							width, flags, padd, extra_c, 1));
-}
+} */
 
 /**
  *  * print_non_printable - Prints ascii codes in hexa of non printable chars
