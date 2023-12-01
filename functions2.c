@@ -102,8 +102,9 @@ int print_non_printable(va_list types, char buffer[],
 int print_reverse(va_list types, char buffer[],
 			int flags, int width, int precision, int size)
 {
+	char *str;
 	(void) precision;
-		char *str;
+		/*char *str;*/
 			int i, count = 0;
 
 				UNUSED(buffer);
