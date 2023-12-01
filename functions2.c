@@ -123,8 +123,7 @@ int print_reverse(va_list types, char buffer[],
 
 																		write(1, &z, 1);
 																				count++;
-																					}
-			(void) precision;									return (count);
+																					}								return (count);
 }
 
 /**
