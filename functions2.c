@@ -99,8 +99,8 @@ int print_non_printable(va_list types, char buffer[],
  *        * @size: Size specifier
  *         * Return: Numbers of chars printed
  *          */
-void print_reverse(va_list types, char buffer[],
-			int flags, int width, int precision, int size)
+int print_reverse(va_list types, char buffer[],
+			int flags, int width, int precision /* UNUSED*/, int size)
 {
 		char *str;
 			int i, count = 0;
