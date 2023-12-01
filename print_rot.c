@@ -1,7 +1,7 @@
 #include"main.h"
 #include <stdarg.h>
 /**
- *  * print_rot13string - Print a string in rot13.
+ *  * 
  *   * @types: Lista of arguments
  *    * @buffer: Buffer array to handle print
  *     * @flags: Calculates active flags
