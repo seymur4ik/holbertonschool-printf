@@ -52,7 +52,7 @@ int print_char(unsigned int z, char c)
  * @value: First operand
  * Return: 0 Successful
  */
-int print_decimal(int value);
+int print_decimal(unsigned int r, int s);
 {
 	int i, j;
 	char buffer[1000000];
