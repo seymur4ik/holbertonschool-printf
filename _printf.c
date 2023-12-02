@@ -52,7 +52,7 @@ int print_char(unsigned int z, char c)
  * @value: First operand
  * Return: 0 Successful
  */
-int print_decimal(int value)
+int print_decimal(int value);
 {
 	int i, j;
 	char buffer[1000000];
@@ -88,44 +88,40 @@ int print_decimal(int value)
  * @format: format
  * Return: letter count
  */
-/*int _printf(const char *format, ...)
+int _printf(const char *format, ...)
 {
 	va_list ptr;
-
 	unsigned int j = 0, r = 0;
 
-	if (!format)
-	{
-		exit(98);
-	}
-	if (*format == '%' && *(format + 1) == 0)
+	if (format == NULL)
 		exit(98);
 	va_start(ptr, format);
-	while (*(format + j))
+	for (j = 0; *(format + j) != '\0'; j++)
 	{
-		if (*(format + j) == '%' && *(format + j + 1) == '%')
+		if (*(format + j) != '%')
 		{
-			_putchar('%'), r++, j += 2;
-		}
+			r++, _putchar(*(format + j)); }
+		else if (*(format + j) == '%' && *(format + j + 1) == '\0')
+			continue;
+		else if (*(format + j) == '%' && *(format + j + 1) == '%')
+		{
+			r++, j++, _putchar('%'); }
 		else if (*(format + j) == '%' && *(format + j + 1) == 'c')
 		{
-			r += print_char(r, (char)va_arg(ptr, int)), j += 2;
-		}
+			r = print_char(r, va_arg(ptr, int));
+			j++; }
 		else if (*(format + j) == '%' && *(format + j + 1) == 's')
 		{
-			r += print_string(r, va_arg(ptr, char *)), j += 2;
-		}
-		else if (*(format + j) == '%' && (*(format + j + 1) == 'd' ||
-		*(format + j + 1) == 'i'))
+			r = print_string(r, va_arg(ptr, char *));
+			j++; }
+		else if ((*(format + j) == '%') && ((*(format + j + 1) == 'd')
+			 || (*(format + j + 1) == 'i')))
 		{
-			r += print_decimal(va_arg(ptr, int)), j += 2;
-		}
+			r = print_decimal(r, va_arg(ptr, int));
+			j++; }
 		else
-		{
-			r++, _putchar(*(format + j)), j++;
-		}
+			r++, _putchar(*(format + j));
 	}
 	if (r == 0)
 		r = -1;
-	return (r);
-}*/
+	return (r); }
