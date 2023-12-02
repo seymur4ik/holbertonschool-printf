@@ -54,35 +54,40 @@ int print_char(unsigned int z, char c)
  */
 int print_decimal(unsigned int r, int s)
 {
-	int i, j;
-	char buffer[1000000];
-	int printed = 0;
+	int mod = 0, c = 0;
 	unsigned int n;
+	char eded[11];
 
-	if (value < 0)
+	if (s < 0)
 	{
 		_putchar('-');
-		printed++;
-		n = -value;
+		r++;
+		n = -1 * s;
 	}
 	else
+		n = s;
+	if (n == 0)
 	{
-		n = value;
+		_putchar(48);
+		return (r + 1);
 	}
-
-	i = 0;
-
-	do {
-		buffer[i++] = '0' + (n % 10);
-		n /= 10;
-		printed++;
-	} while (n > 0);
-	for (j = i - 1; j >= 0; j--)
+	while (n > 0)
 	{
-		_putchar(buffer[j]);
+		mod = n % 10;
+		eded[c] = mod + 48;
+		n = n / 10;
+		c++;
 	}
-	return (printed);
+	r = r + c;
+	c = c - 1;
+	while (c >= 0)
+	{
+		_putchar(eded[c]);
+		c--;
+	}
+	return (r);
 }
+	
 /**
  * _printf - print string
  * @format: format
