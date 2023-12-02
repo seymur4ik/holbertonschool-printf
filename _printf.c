@@ -88,7 +88,7 @@ int print_decimal(int value)
  * @format: format
  * Return: letter count
  */
-int _printf(const char *format, ...)
+/*int _printf(const char *format, ...)
 {
 	va_list ptr;
 
@@ -128,4 +128,4 @@ int _printf(const char *format, ...)
 	if (r == 0)
 		r = -1;
 	return (r);
-}
+}*/

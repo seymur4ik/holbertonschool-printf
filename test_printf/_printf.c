@@ -125,5 +125,7 @@ int _printf(const char *format, ...)
 			r++, _putchar(*(format + j)), j++;
 		}
 	}
+	if ( r == 0)
+		r = -1;
 	return (r);
 }
