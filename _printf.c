@@ -49,7 +49,8 @@ int print_char(unsigned int z, char c)
 }
 /**
  * print_decimal - This is decimal
- * @value: First operand
+ * @r: count of numbers
+ * @s: number string
  * Return: 0 Successful
  */
 int print_decimal(unsigned int r, int s)
@@ -87,7 +88,7 @@ int print_decimal(unsigned int r, int s)
 	}
 	return (r);
 }
-	
+
 /**
  * _printf - print string
  * @format: format
